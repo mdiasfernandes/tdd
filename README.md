@@ -24,4 +24,5 @@
 - `migration` - Permite editar/alterar o BD de forma estruturada e organizada
 - `rails g migration add_name_kind_level_to_user nickname:string kind:integer level:integer` - Cria uma nova migration (nova alteração no BD)
 - `rails db:migrate` - Executa todas as migrations no BD que ainda não foram executadas segundo o `Active Record`
-- 
+
+- `gem factory bot` - Ferramenta que possibilita manipulação de `records` de forma organizada dentro dos testes.
