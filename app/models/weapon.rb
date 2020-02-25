@@ -8,9 +8,6 @@ class Weapon < ApplicationRecord
     end
 
     def weapon_title
-      puts "Name: #{name}"
-      puts "Description: #{description}"
-      puts "Power: #{current_power}"
-      puts "Level: #{level}"
+      "Name: #{name}, Description: #{description}, Power Base: #{power_base}, Level: #{level}"
     end
 end

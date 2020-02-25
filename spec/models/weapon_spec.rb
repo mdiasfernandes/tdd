@@ -35,11 +35,24 @@ RSpec.describe Weapon, type: :model do
     end
   end
 
-  # it 'returns the correct hero tittle' do
-  #   nickname = Faker::Name.first_name
-  #   kind = %i[knight wizard].sample
-  #   level = Faker::Number.within(range: 1..99)
-  #   user = build(:user, nickname: nickname, kind: kind, level: level) #> build(factory, factory_data)
-  #   expect(user.title).to eq("#{kind} #{nickname} ##{level}")
-  # end
+  describe 'Evaluate Current Power' do
+    it 'Current Power' do
+      power_base = Faker::Number.within(range:3000..999999)
+      power_step = Faker::Number.within(range:100..999999)
+      level = Faker::Number.within(range:1..999999)
+      weapon = build(:weapon, power_step: power_step, power_base: power_base, level: level)
+      expect(weapon.current_power).to eq(power_base + ((level-1)*power_step))
+    end
+  end
+
+  describe 'Weapon details' do
+    it 'Weapon tittle' do
+      name = Faker::Name.first_name
+      description = %i[knight wizard].sample
+      power_base = Faker::Number.within(range:3000..999999)
+      level = Faker::Number.within(range:1..999999)
+      weapon = build(:weapon, name: name, description: description, power_base: power_base, level: level)
+      expect(weapon.weapon_title).to eq("Name: #{name}, Description: #{description}, Power Base: #{power_base}, Level: #{level}")
+    end
+  end
 end
