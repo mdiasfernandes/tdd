@@ -26,3 +26,8 @@
 - `rails db:migrate` - Executa todas as migrations no BD que ainda não foram executadas segundo o `Active Record`
 
 - `gem factory bot` - Ferramenta que possibilita manipulação de `records` de forma organizada dentro dos testes.
+
+# Execução do teste
+- `bundle exec rspec/file.rb`
+- `bundle exec rspec/file.rb -e 'it description'`
+- `bundle exec rspec/file.rb:15` (pela linha do it)
