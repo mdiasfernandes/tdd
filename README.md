@@ -31,3 +31,8 @@
 - `bundle exec rspec/file.rb`
 - `bundle exec rspec/file.rb -e 'it description'`
 - `bundle exec rspec/file.rb:15` (pela linha do it)
+
+# Sobre o describe
+- `Rspec.describe`
+- Toda descrição depois de `describe` pode ser o subject do teste em questão
+- 
